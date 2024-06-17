@@ -1,0 +1,116 @@
+// Xây dựng footer cho dự án
+@use "../partials/variables";
+@use "../partials/mixin";
+@use "../partials/reset";
+
+.footer {
+    padding-top: 66px;
+    padding-bottom: 40px;
+    background: variables.$backgroundColor_02;
+  
+    .footer-inner {
+        width: 85%;
+        margin: 0 auto;
+      &::after {
+        content: "";
+        display: block;
+        height: 1.667px;
+        background: #a3a3a3;
+        margin-top: 72.5px;
+      }
+      .footer-item {
+        .logo {
+          margin-bottom: 24.58px;
+        }
+        p {
+            margin-bottom: 6.67px;
+            font-size: 1.4rem;
+            font-weight: 400;
+  
+          &.title {
+            font-weight: 600;
+            color: variables.$primaryColor;
+            margin-bottom: 13px;
+          }
+        }
+  
+        ul {
+          li {
+            margin-bottom: 6.67px;
+            display: flex;
+            flex-wrap: wrap;
+            a {
+                color: variables.$textColor;
+                font-family: variables.$font;
+                font-size: variables.$fontSize;
+                font-weight: 400;
+                line-height: 127%;
+            }
+            svg {
+              flex-basis: 20px;
+              margin-right: 10px;
+            }
+            span {
+              flex-basis: calc(100% - 30px);
+            }
+            .footer-time,
+            .footer-phone {
+                color: variables.$textColor;
+                font-family: variables.$font;
+                font-size: variables.$fontSize;
+                font-weight: 600;
+                line-height: 125%;
+                flex-basis: calc(100% - 30px);
+            }
+          }
+        }
+      }
+    }
+  
+    .footer-bottom {
+      padding-top: 24.17px;
+      width: 85%;
+      margin: 0 auto;
+      .socials {
+        @include mixin.flex-end-center;
+        height: 100%;
+        column-gap: 6.67px;
+        li {
+          a {
+            display: block;
+            @include mixin.flex-center;
+            width: 40px;
+            height: 40px;
+            background: #dcffca;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+}
+
+@media screen and (max-width: 1199.98px) {
+    .footer {
+      .footer-inner {
+        &::after {
+          margin-top: 20px;
+        }
+        .footer-item {
+          margin-bottom: 20px;
+        }
+      }
+    }
+}
+  
+@media screen and (max-width: 575.98px) {
+    .footer {
+      .footer-bottom {
+        .footer-img {
+          text-align: center;
+        }
+        .socials {
+          justify-content: center;
+        }
+      }
+    }
+}
