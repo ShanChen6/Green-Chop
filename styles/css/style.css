@@ -319,12 +319,13 @@ table {
   color: #216000;
   font-family: "Inter", sans-serif;
   font-style: normal;
+  text-transform: capitalize;
   font-weight: 800;
   line-height: 100%;
   opacity: 0.15;
   rotate: 90deg;
   position: absolute;
-  top: 0;
+  top: 50px;
   bottom: 0;
   left: 35px;
   display: inline-block;
@@ -347,6 +348,9 @@ table {
 }
 @media screen and (max-width: 991.98px) {
   .overview .overview__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     margin-bottom: 20px;
   }
@@ -373,7 +377,7 @@ table {
   }
   .overview .overview__img img {
     margin: 0 auto;
-    max-width: 70%;
+    max-width: 100%;
     display: block;
   }
   .overview .overview__img span {
@@ -394,7 +398,7 @@ table {
   padding: 100px 0;
 }
 .about .about__heading {
-  max-width: 53%;
+  max-width: 60%;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 110px;
@@ -668,7 +672,7 @@ table {
   padding: 64px 0;
 }
 .posts .posts__heading {
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
 }
@@ -692,11 +696,11 @@ table {
   margin: 23px 0 28px;
 }
 .posts .posts__list .row .post-item .image img {
-  width: 95%;
+  width: 100%;
   border-radius: 6.667px;
 }
 .posts .posts__list .row .post-item .meta {
-  width: 95%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -724,7 +728,7 @@ table {
   margin-right: 10px;
 }
 .posts .posts__list .row .post-item .title {
-  width: 95%;
+  width: 100%;
   margin-bottom: 16.27px;
 }
 .posts .posts__list .row .post-item .title a {
@@ -736,7 +740,7 @@ table {
   line-height: 133.333%;
 }
 .posts .posts__list .row .post-item p {
-  width: 95%;
+  width: 100%;
   color: #2c2c2c;
   font-family: "Inter", sans-serif;
   font-size: 1.6rem;
@@ -808,9 +812,9 @@ table {
   position: relative;
 }
 .feature .feature__heading {
-  width: 50%;
+  width: 100%;
   text-align: center;
-  margin: 0 auto;
+  margin: auto;
   margin-bottom: 50px;
 }
 .feature .feature__heading h2 {
@@ -839,7 +843,7 @@ table {
   column-gap: 25px;
 }
 .feature .feature__list .feature-item {
-  max-width: 95%;
+  max-width: 100%;
   height: 100%;
   background: #fff;
   border-radius: 8.333px;
@@ -884,9 +888,6 @@ table {
 }
 
 @media screen and (max-width: 991.98px) {
-  .feature {
-    padding: 30px 0;
-  }
   .feature .feature__heading {
     max-width: 100%;
   }
@@ -894,8 +895,8 @@ table {
     flex-wrap: wrap;
   }
   .feature .feature__list .feature-item {
-    flex-basis: calc(100% - 25px);
-    max-width: calc(100% - 25px);
+    flex-basis: 100%;
+    max-width: 100%;
   }
   .feature .feature__list .feature-item .image img {
     width: 100%;
